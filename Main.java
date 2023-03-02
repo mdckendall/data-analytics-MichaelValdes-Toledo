@@ -3,7 +3,9 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 class Main {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws FileNotFoundException {
+    FileReader frr = new FileReader("names.txt");
+    Scanner scann = new Scanner(frr);
     Scanner scanner = new Scanner(System.in);
     ArrayList<String> names = new ArrayList<>();
     int option = 0;
@@ -25,8 +27,8 @@ class Main {
     }
     if(option == 4){
       try {
-            FileReader fr = new FileReader("names.txt");
-            Scanner scan = new Scanner(fr);
+        FileReader fr = new FileReader("names.txt");
+        Scanner scan = new Scanner(fr);
             while(scan.hasNextLine()){
                 String curLine = scan.nextLine();
                   String name [] = curLine.split(System.lineSeparator());
