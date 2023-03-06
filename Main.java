@@ -24,6 +24,7 @@ class Main {
       System.out.println("Top 10 Forbes In-Demand Jobs!");
     }
     if(option == 4){
+      System.out.println("Current Students:");
       try {
         FileReader fr = new FileReader("names.txt");
         Scanner scan = new Scanner(fr);
